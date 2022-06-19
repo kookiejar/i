@@ -2,8 +2,8 @@ window.addEventListener("load", async () => {
     const formXpath = "/html/body/div[2]/div[2]/div[2]/section/form";
     const form = document.evaluate(formXpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
     form.addEventListener("submit", async () => {
-        let username = document.getElementById("UserName");
-        let password = document.getElementById("Password");
+        let username = document.getElementById("UserName").value;
+        let password = document.getElementById("Password").value;
         const header = {
             "Content-type": "application/json"
         };
